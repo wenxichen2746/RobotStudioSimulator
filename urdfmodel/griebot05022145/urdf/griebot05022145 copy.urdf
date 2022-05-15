@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="griebot05022145">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0012171 -0.0073486 0.087541"
+        rpy="0 0 0" />
+      <mass
+        value="2" />
+      <inertia
+        ixx="0.012022"
+        ixy="9.4559E-06"
+        ixz="-9.2257E-05"
+        iyy="0.014905"
+        iyz="0.00080386"
+        izz="0.005398" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.53725 0.34902 0.33725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Lhip">
+    <inertial>
+      <origin
+        xyz="-0.0015118 -0.0035452 -0.018069"
+        rpy="0 0 0" />
+      <mass
+        value="0.79106" />
+      <inertia
+        ixx="0.00058107"
+        ixy="3.1255E-05"
+        ixz="1.0617E-05"
+        iyy="0.00052094"
+        iyz="-0.00013177"
+        izz="0.00040317" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Lhip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89412 0.91373 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Lhip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lhipj"
+    type="revolute">
+    <origin
+      xyz="-0.059699 0.014402 -0.049024"
+      rpy="1.487 -0.013805 -3.1404" />
+    <parent
+      link="base_link" />
+    <child
+      link="Lhip" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="1"
+      velocity="0.1" />
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+  <link
+    name="Lthigh">
+    <inertial>
+      <origin
+        xyz="-0.0003203 -0.062783 -0.0017283"
+        rpy="0 0 0" />
+      <mass
+        value="0.71234" />
+      <inertia
+        ixx="0.00098396"
+        ixy="-4.2572E-06"
+        ixz="-3.6167E-07"
+        iyy="0.00018103"
+        iyz="1.0499E-05"
+        izz="0.001062" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Lthigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89412 0.91373 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Lthigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lthighj"
+    type="revolute">
+    <origin
+      xyz="0.00025 -0.035 0.0005"
+      rpy="-3.1044 0 -3.1416" />
+    <parent
+      link="Lhip" />
+    <child
+      link="Lthigh" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="1"
+      velocity="0.1" />
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+  <link
+    name="Lshank">
+    <inertial>
+      <origin
+        xyz="3.2594920512663E-10 -0.0634251787082965 0.00121806324800778"
+        rpy="0 0 0" />
+      <mass
+        value="0.971159126419196" />
+      <inertia
+        ixx="0.00143380464999894"
+        ixy="7.75222705704431E-12"
+        ixz="2.67658648332375E-11"
+        iyy="0.000326466892537684"
+        iyz="-1.21406347145087E-05"
+        izz="0.00160808166417937" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Lshank.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Lshank.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lshankj"
+    type="revolute">
+    <origin
+      xyz="-0.0004 -0.14107 0"
+      rpy="0.034967 0 0" />
+    <parent
+      link="Lthigh" />
+    <child
+      link="Lshank" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="1"
+      velocity="0.1" />
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+  <link
+    name="Lfeet">
+    <inertial>
+      <origin
+        xyz="-5.23888605068329E-05 -0.0514905085699377 0.0322028329707553"
+        rpy="0 0 0" />
+      <mass
+        value="1.24875214793965" />
+      <inertia
+        ixx="0.00317691490621512"
+        ixy="3.36872463948423E-06"
+        ixz="-2.10664133937938E-06"
+        iyy="0.00250470632605774"
+        iyz="0.000755030566721414"
+        izz="0.00108653855364652" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Lfeet.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.537254901960784 0.349019607843137 0.337254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Lfeet.STL" />
+      </geometry>
+      <contact_coefficients mu="1.0" kp ="1.0" kd ="1.0"/>
+    </collision>
+  </link>
+  <joint
+    name="Lfeetj"
+    type="revolute">
+    <origin
+      xyz="-0.001 -0.135 0"
+      rpy="-3.0694 0 -3.1416" />
+    <parent
+      link="Lshank" />
+    <child
+      link="Lfeet" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="1"
+      velocity="0.1" />
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+  <link
+    name="Rhip">
+    <inertial>
+      <origin
+        xyz="-0.00156619964153285 -0.00354518831499397 0.0180693540404438"
+        rpy="0 0 0" />
+      <mass
+        value="0.791055479754025" />
+      <inertia
+        ixx="0.00058106981703299"
+        ixy="3.12546764390449E-05"
+        ixz="-1.06166100466979E-05"
+        iyy="0.000520936539769206"
+        iyz="0.000131765521291072"
+        izz="0.000403166157033582" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Rhip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Rhip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rhipj"
+    type="revolute">
+    <origin
+      xyz="0.058289 0.013792 -0.050716"
+      rpy="1.6546 0.013805 0.0011592" />
+    <parent
+      link="base_link" />
+    <child
+      link="Rhip" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="1"
+      velocity="0.1" />
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+  <link
+    name="Rthigh">
+    <inertial>
+      <origin
+        xyz="-0.000302367218254565 -0.0627833596751284 -0.00175255894390427"
+        rpy="0 0 0" />
+      <mass
+        value="0.712335276121289" />
+      <inertia
+        ixx="0.000983959306971484"
+        ixy="-4.25120946654167E-06"
+        ixz="-3.61672019322798E-07"
+        iyy="0.000181029360807063"
+        iyz="1.04990863006093E-05"
+        izz="0.00106202447529497" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Rthigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Rthigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rthighj"
+    type="revolute">
+    <origin
+      xyz="-0.001 -0.035 -0.0005"
+      rpy="0.037192 0 0" />
+    <parent
+      link="Rhip" />
+    <child
+      link="Rthigh" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="1"
+      velocity="0.1" />
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+  <link
+    name="Rshank">
+    <inertial>
+      <origin
+        xyz="3.25949232882206E-10 -0.0634251787082965 0.00121806324800781"
+        rpy="0 0 0" />
+      <mass
+        value="0.971159126419195" />
+      <inertia
+        ixx="0.00143380464999894"
+        ixy="7.75222744616662E-12"
+        ixz="2.67658648352492E-11"
+        iyy="0.000326466892537684"
+        iyz="-1.21406347145083E-05"
+        izz="0.00160808166417937" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Rshank.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Rshank.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rshankj"
+    type="revolute">
+    <origin
+      xyz="0.0019 -0.14107 -0.0005"
+      rpy="0.034967 0 0" />
+    <parent
+      link="Rthigh" />
+    <child
+      link="Rshank" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="1"
+      velocity="0.1" />
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+  <link
+    name="Rfeet">
+    <inertial>
+      <origin
+        xyz="-5.23888605068051E-05 -0.0514905085699374 0.0322028329707553"
+        rpy="0 0 0" />
+      <mass
+        value="1.24875214793965" />
+      <inertia
+        ixx="0.00317691490621497"
+        ixy="3.36872463948564E-06"
+        ixz="-2.10664133937937E-06"
+        iyy="0.0025047063260579"
+        iyz="0.000755030566721405"
+        izz="0.00108653855364621" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Rfeet.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.537254901960784 0.349019607843137 0.337254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022145/meshes/Rfeet.STL" />
+      </geometry>
+      <contact_coefficients mu="1.0" kp ="1.0" kd ="1.0"/>
+    </collision>
+  </link>
+  <joint
+    name="Rfeetj"
+    type="revolute">
+    <origin
+      xyz="0.001 -0.135 0"
+      rpy="-3.0694 0 3.1416" />
+    <parent
+      link="Rshank" />
+    <child
+      link="Rfeet" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="1"
+      velocity="0.1" />
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+</robot>

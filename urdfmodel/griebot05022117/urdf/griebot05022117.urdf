@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="griebot05022117">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0012171 -0.0073486 0.087541"
+        rpy="0 0 0" />
+      <mass
+        value="3.3778" />
+      <inertia
+        ixx="0.012022"
+        ixy="9.4559E-06"
+        ixz="-9.2257E-05"
+        iyy="0.014905"
+        iyz="0.00080386"
+        izz="0.005398" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.53725 0.34902 0.33725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Rhip">
+    <inertial>
+      <origin
+        xyz="-0.0015662 -0.0035452 0.018069"
+        rpy="0 0 0" />
+      <mass
+        value="0.79106" />
+      <inertia
+        ixx="0.00058107"
+        ixy="3.1255E-05"
+        ixz="-1.0617E-05"
+        iyy="0.00052094"
+        iyz="0.00013177"
+        izz="0.00040317" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Rhip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89412 0.91373 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Rhip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rhipjoint"
+    type="revolute">
+    <origin
+      xyz="0.058289 0.013792 -0.050716"
+      rpy="1.6546 0.013805 0.0011592" />
+    <parent
+      link="base_link" />
+    <child
+      link="Rhip" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="110"
+      velocity="2" />
+  </joint>
+  <link
+    name="Rthigh">
+    <inertial>
+      <origin
+        xyz="-0.000302367218254565 -0.0627833596751284 -0.00175255894390427"
+        rpy="0 0 0" />
+      <mass
+        value="0.712335276121288" />
+      <inertia
+        ixx="0.000983959306971485"
+        ixy="-4.25120946654166E-06"
+        ixz="-3.616720193228E-07"
+        iyy="0.000181029360807063"
+        iyz="1.04990863006093E-05"
+        izz="0.00106202447529497" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Rthigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Rthigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rthighjoint"
+    type="revolute">
+    <origin
+      xyz="-0.001 -0.035 -0.0005"
+      rpy="0.037192 0 0" />
+    <parent
+      link="Rhip" />
+    <child
+      link="Rthigh" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="110"
+      velocity="2" />
+  </joint>
+  <link
+    name="Rshank">
+    <inertial>
+      <origin
+        xyz="3.25949239821099E-10 -0.0634251787082965 0.00121806324800781"
+        rpy="0 0 0" />
+      <mass
+        value="0.971159126419195" />
+      <inertia
+        ixx="0.00143380464999894"
+        ixy="7.75222745383954E-12"
+        ixz="2.67658648348257E-11"
+        iyy="0.000326466892537684"
+        iyz="-1.21406347145082E-05"
+        izz="0.00160808166417937" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Rshank.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Rshank.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rshankjoint"
+    type="revolute">
+    <origin
+      xyz="0.0019 -0.14107 -0.0005"
+      rpy="0.034967 0 0" />
+    <parent
+      link="Rthigh" />
+    <child
+      link="Rshank" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="110"
+      velocity="2" />
+  </joint>
+  <link
+    name="Rfeet">
+    <inertial>
+      <origin
+        xyz="-5.23888605068051E-05 -0.0514905085699374 0.0322028329707553"
+        rpy="0 0 0" />
+      <mass
+        value="1.24875214793965" />
+      <inertia
+        ixx="0.00317691490621497"
+        ixy="3.36872463948565E-06"
+        ixz="-2.10664133937937E-06"
+        iyy="0.0025047063260579"
+        iyz="0.000755030566721405"
+        izz="0.00108653855364621" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Rfeet.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.537254901960784 0.349019607843137 0.337254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Rfeet.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rfeetjoint"
+    type="revolute">
+    <origin
+      xyz="0.001 -0.135 0"
+      rpy="-3.0694 0 3.1416" />
+    <parent
+      link="Rshank" />
+    <child
+      link="Rfeet" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="110"
+      velocity="2" />
+  </joint>
+  <link
+    name="Lhip">
+    <inertial>
+      <origin
+        xyz="-0.0015662 -0.0035452 0.087541"
+        rpy="0 0 0" />
+      <mass
+        value="0.9" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Lhip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Lhip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lhipjoint"
+    type="revolute">
+    <origin
+      xyz="-0.059699 0.014402 -0.049024"
+      rpy="1.487 -0.013805 -3.1404" />
+    <parent
+      link="base_link" />
+    <child
+      link="Lhip" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="110"
+      velocity="2" />
+  </joint>
+  <link
+    name="Lthigh">
+    <inertial>
+      <origin
+        xyz="-0.000320301621398539 -0.0627833596598404 -0.00172830605880608"
+        rpy="0 0 0" />
+      <mass
+        value="0.712335275972869" />
+      <inertia
+        ixx="0.000983959306948012"
+        ixy="-4.25717499980427E-06"
+        ixz="-3.61671998533483E-07"
+        iyy="0.000181029360787908"
+        iyz="1.04992660678205E-05"
+        izz="0.00106202447528358" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Lthigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Lthigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lthighjoint"
+    type="revolute">
+    <origin
+      xyz="0.00025 -0.035 0.0005"
+      rpy="-3.1044 0 -3.1416" />
+    <parent
+      link="Lhip" />
+    <child
+      link="Lthigh" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="110"
+      velocity="2" />
+  </joint>
+  <link
+    name="Lshank">
+    <inertial>
+      <origin
+        xyz="3.2594920512663E-10 -0.0634251787082965 0.00121806324800778"
+        rpy="0 0 0" />
+      <mass
+        value="0.971159126419196" />
+      <inertia
+        ixx="0.00143380464999894"
+        ixy="7.75222703410494E-12"
+        ixz="2.6765864836308E-11"
+        iyy="0.000326466892537684"
+        iyz="-1.21406347145087E-05"
+        izz="0.00160808166417937" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Lshank.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Lshank.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lshankjoint"
+    type="revolute">
+    <origin
+      xyz="-0.0004 -0.14107 0"
+      rpy="0.034967 0 0" />
+    <parent
+      link="Lthigh" />
+    <child
+      link="Lshank" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="110"
+      velocity="2" />
+  </joint>
+  <link
+    name="Lfeet">
+    <inertial>
+      <origin
+        xyz="-5.23888605068329E-05 -0.0514905085699378 0.0322028329707553"
+        rpy="0 0 0" />
+      <mass
+        value="1.24875214793965" />
+      <inertia
+        ixx="0.00317691490621512"
+        ixy="3.36872463948427E-06"
+        ixz="-2.10664133937934E-06"
+        iyy="0.00250470632605774"
+        iyz="0.000755030566721414"
+        izz="0.00108653855364652" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Lfeet.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.537254901960784 0.349019607843137 0.337254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://griebot05022117/meshes/Lfeet.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lfeetjoint"
+    type="revolute">
+    <origin
+      xyz="-0.001 -0.135 0"
+      rpy="-3.0694 0 -3.1416" />
+    <parent
+      link="Lshank" />
+    <child
+      link="Lfeet" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3"
+      upper="3"
+      effort="110"
+      velocity="2" />
+  </joint>
+</robot>

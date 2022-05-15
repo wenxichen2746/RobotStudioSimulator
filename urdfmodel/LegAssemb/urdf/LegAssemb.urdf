@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="LegAssemb">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.20863304193815 0.0692641832716312 0.0477667457964067"
+        rpy="0 0 0" />
+      <mass
+        value="1.03430056883378" />
+      <inertia
+        ixx="0.000426202931707901"
+        ixy="-6.37572571128734E-08"
+        ixz="7.59328755496436E-07"
+        iyy="0.000441208001518973"
+        iyz="-3.35829294154745E-06"
+        izz="0.000480922227947212" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LegAssemb/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.537254901960784 0.349019607843137 0.337254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LegAssemb/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Rhip">
+    <inertial>
+      <origin
+        xyz="0.0074338003427552 -0.03242460499818 -0.0413705809848454"
+        rpy="0 0 0" />
+      <mass
+        value="0.791055479855578" />
+      <inertia
+        ixx="0.000581069817188938"
+        ixy="3.12546765976489E-05"
+        ixz="-1.06166101215604E-05"
+        iyy="0.000520936540159175"
+        iyz="0.000131765521570148"
+        izz="0.000403166157498855" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LegAssemb/meshes/Rhip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LegAssemb/meshes/Rhip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rhipjoint"
+    type="revolute">
+    <origin
+      xyz="0.25863 0.019512 0.043363"
+      rpy="1.6546 -0.010502 -0.0008818" />
+    <parent
+      link="base_link" />
+    <child
+      link="Rhip" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Rthigh">
+    <inertial>
+      <origin
+        xyz="0.00769763457059242 -0.0627833558542452 -0.00175255976281827"
+        rpy="0 0 0" />
+      <mass
+        value="0.712335305464064" />
+      <inertia
+        ixx="0.000983959344200403"
+        ixy="-4.25123957402627E-06"
+        ixz="-3.6167341359152E-07"
+        iyy="0.000181029415635686"
+        iyz="1.04992326956344E-05"
+        izz="0.00106202448686337" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LegAssemb/meshes/Rthigh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LegAssemb/meshes/Rthigh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rthighjoint"
+    type="revolute">
+    <origin
+      xyz="0 -0.063879 -0.05994"
+      rpy="-0.064356 0 0" />
+    <parent
+      link="Rhip" />
+    <child
+      link="Rthigh" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Rshank">
+    <inertial>
+      <origin
+        xyz="0.00990000014913311 -0.0634251797510051 0.00121806422284944"
+        rpy="0 0 0" />
+      <mass
+        value="0.971159074392089" />
+      <inertia
+        ixx="0.00143380462653115"
+        ixy="-1.4053596770111E-11"
+        ixz="2.5384569405794E-11"
+        iyy="0.000326466882017216"
+        iyz="-1.21406567523206E-05"
+        izz="0.00160808162772235" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LegAssemb/meshes/Rshank.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LegAssemb/meshes/Rshank.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rshankjoint"
+    type="revolute">
+    <origin
+      xyz="0 -0.14107 -0.0005"
+      rpy="0.056452 0 0" />
+    <parent
+      link="Rthigh" />
+    <child
+      link="Rshank" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Lhip">
+    <inertial>
+      <origin
+        xyz="0.00748818071289314 -0.0324246050220238 0.041370668212364"
+        rpy="0 0 0" />
+      <mass
+        value="0.791055476960042" />
+      <inertia
+        ixx="0.000581069816124814"
+        ixy="3.12546762715253E-05"
+        ixz="1.06166686901471E-05"
+        iyy="0.000520936538406736"
+        iyz="-0.000131765341329327"
+        izz="0.000403166156815968" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LegAssemb/meshes/Lhip.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.894117647058823 0.913725490196078 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://LegAssemb/meshes/Lhip.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lhipjoint"
+    type="revolute">
+    <origin
+      xyz="0.15864 0.020144 0.044806"
+      rpy="1.487 0.023951 3.1396" />
+    <parent
+      link="base_link" />
+    <child
+      link="Lhip" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
